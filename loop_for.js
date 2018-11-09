@@ -52,3 +52,27 @@ function sortInteger(e,f) {
     }
     return x;
 }
+
+/* Даны числа a и b. Выведите строку с числами от большего числа до меньшего. Известно, что и a и b больше либо равно 1, но неизвестно, какое из них больше. */
+
+function sortBackInteger (k,l) {
+    var x = "";
+    var biger;
+    var less;
+    if(k > l) {
+        biger = k;
+        less = l;
+    } else if (k < l) {
+        biger = l;
+        less = k;
+    } else {
+        biger = k;
+        less = l;
+    }
+    
+    for (var i = biger; i >= less; i--) {
+        x = x + " " + i;
+    }
+    
+    return x;
+}
