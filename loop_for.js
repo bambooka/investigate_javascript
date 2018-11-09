@@ -18,3 +18,14 @@ function repeatInteger(a, b) {
     }
     return x;
 }
+
+/* Даны числа a и b. Выведите строку с числами от а до b, разделенных пробелами. Известно, что b больше a. */
+
+function orderInteger (c,d) {
+    var x = "";
+    
+    for(var i = c; i <= d; i++){
+        x = s + " " + i;
+    }
+    return x;
+}
