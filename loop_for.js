@@ -29,3 +29,26 @@ function orderInteger (c,d) {
     }
     return x;
 }
+
+/* Даны числа a и b. Выведите строку с числами между а и b отсортированными по возрастанию. Неизвестно, какое из чисел больше, но известно, что и a и b больше 0. */
+
+function sortInteger(e,f) {
+    var x = "";
+    var biger;
+    var less;
+    if (e > f){
+        biger = e;
+        less = f;
+    } else if (e < f) {
+        biger = f;
+        less = e;
+    } else {
+        biger = f;
+        less = e;
+    }
+    
+    for(var i = less; i <= biger; i++) {
+        x = x + " " + i;
+    }
+    return x;
+}
