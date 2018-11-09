@@ -76,3 +76,27 @@ function sortBackInteger (k,l) {
     
     return x;
 }
+
+/* Даны числа a и b. Найдите сумму квадратов чисел между a и b включительно. Неизвестно, какое из чисел a или b больше. */
+
+function squereInteger (a, b){
+    var x = 0;
+    var biger;
+    var less;
+    
+    if (a > b) {
+        biger = a;
+        less = b;
+    } else if (b > a){
+        biger = b;
+        less = a;
+    } else {
+        biger = a;
+        less = a;
+    }
+    
+    for (var i  = less; i <= biger; i++) {
+        x = x + i * i;
+    }
+    return x;
+}
