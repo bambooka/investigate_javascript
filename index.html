@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bubbles</title>
+</head>
+<body>
+<script>
+
+    let arr = [3, 67, 1, 8, 58, 321, 248, 878];
+
+    let bubbles = function(arr){
+        let big, small;
+        let repeatSort = false;
+        for(let i = 0; i < arr.length - 1; i++) {
+            if(arr[i] > arr[i + 1]) {
+                big = arr[i];
+                small = arr[i + 1];
+                arr[i] = small;
+                arr[i + 1] = big;
+                repeatSort = true;
+            }
+        }
+        if (repeatSort) {
+            bubbles(arr);
+        } else {
+            return arr;
+        }
+    };
+
+    bubbles(arr);
+</script>
+</body>
+</html>
