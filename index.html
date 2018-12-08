@@ -7,17 +7,15 @@
 <body>
 <script>
 
-    let arr = [6, 9, 10, 4];
+    let arr = [6, 9, 10, 4, 5, 9, 3];
 
-    let bubbles = function(arr){
-        let big, small;
+    let bubbles = (arr) => {
         let repeatSort = false;
         for(let i = 0; i < arr.length - 1; i++) {
             if(arr[i] > arr[i + 1]) {
-                big = arr[i];
-                small = arr[i + 1];
-                arr[i] = small;
-                arr[i + 1] = big;
+                let temporary = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temporary;
                 repeatSort = true;
             }
         }
