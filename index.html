@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bubbles</title>
+</head>
+<body>
+<script>
+
+// bubbles sort
+    let arr = [6, 9, 10, 4, 5, 9, 3];
+
+    let bubbles = (arr) => {
+        let repeatSort = false;
+        for(let i = 0; i < arr.length - 1; i++) {
+            if(arr[i] > arr[i + 1]) {
+                let temporary = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temporary;
+                repeatSort = true;
+            }
+        }
+        if (repeatSort) {
+            bubbles(arr);
+        } else {
+            return arr;
+        }
+    };
+
+    bubbles(arr);
+</script>
+</body>
+</html>
